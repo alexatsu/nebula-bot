@@ -17,7 +17,6 @@
     "license": "BSD-2-Clause",
     "author": "x44annie",
     "type": "module",
-    "main": "src/index.ts",
     "scripts": {
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",

@@ -1,0 +1,18 @@
+version: '3'
+services:
+    discord-bot:
+        build: . # This tells compose to build using the Dockerfile
+        image: nebula-bot # Optional: names the built image
+        container_name: nebula-bot # Sets the container name
+        env_file:
+            - .env
+        restart:
+            unless-stopped
+            # Remove tty: true as it can cause duplication
+        tty: false # ← Disable TTY (no pseudo-terminal)
+        stdin_open: false # ← Disable unused stdin
+        logging:
+            driver: 'json-file' # ← Default, but ensures no duplication
+            options:
+                max-size: '10m'
+                mode: non-blocking # ← Prevents log buffering issues

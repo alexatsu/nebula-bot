@@ -15,7 +15,6 @@
         "isolatedModules": true,
         "verbatimModuleSyntax": true,
         "typeRoots": ["./node_modules/@types", "src/shared/types"],
-        "types": ["node"],
         "outDir": "dist",
         "rootDir": "src",
         "baseUrl": "./src", // Enables absolute imports from "src"
