@@ -1,6 +1,6 @@
 import { client } from '@/shared/client'
 
-const roleId = '1387188418462879824'
+const roleId = '1387188418462879824' // "Member" role
 
 export function autoRoleEvent() {
     client.on('guildMemberAdd', async member => {
