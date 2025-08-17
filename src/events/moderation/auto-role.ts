@@ -1,9 +1,10 @@
 import { client } from '@/shared/client'
+import { Events } from 'discord.js'
 
 const roleId = '1387188418462879824' // "Member" role
 
 export function autoRoleEvent() {
-    client.on('guildMemberAdd', async member => {
+    client.on(Events.GuildMemberAdd, async member => {
         try {
             const role = member.guild.roles.cache.get(roleId)
 
